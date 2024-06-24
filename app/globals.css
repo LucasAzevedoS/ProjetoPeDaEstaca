@@ -41,12 +41,19 @@ body {
   font-family: 'roboto';
 }
 
+.swiper-container{
+  background-color: #343D3F;
+  
+}
 .slider-item{
-  margin: 0;
+  margin-top: 5rem;
+  margin-right: 0;
+  margin-left: 4rem;
   padding: 0;
   width: 350px;
   height: 100%;
   object-fit: cover;
+  
 }
 
 
