@@ -109,20 +109,30 @@ export default function Page() {
       </Swiper>
 
 
-      <Box bg='#343D3F'>
-        <Box>
-          <Text as='b' fontSize='5xl' >COMO FUNCIONA </Text>
-          <Text fontSize='3xl'>O projeto convida fazendeiros e sitiantes locais a colaborar cedendo áreas próximas às divisas e margens das estradas para promover mudanças ambientais. Estudantes, ONGs, igrejas e voluntários interessados na conservação ambiental são incentivados a participar. Os voluntários plantarão e cuidarão de árvores nativas até que se tornem adultas, sendo que cada árvore plantada levará o nome do participante.</Text>
+      <Box bg='#343D3F' p='3rem'>
+        <Box ml='4rem' mr='3rem' mt='2rem'>
+          <Text as='b' fontSize='5xl' textColor='white' >COMO FUNCIONA </Text>
+          <Text fontSize='3xl' textColor='white' mt='2rem'>O projeto convida fazendeiros e sitiantes locais a colaborar cedendo áreas próximas às divisas e margens das estradas para promover mudanças ambientais. Estudantes, ONGs, igrejas e voluntários interessados na conservação ambiental são incentivados a participar. Os voluntários plantarão e cuidarão de árvores nativas até que se tornem adultas, sendo que cada árvore plantada levará o nome do participante.</Text>
+        </Box >
+        <Box ml='4rem' mr='3rem' mt='2rem'>
+          <Text as='b' fontSize='5xl' textColor='white'>ACOMPANHAMENTO VERDE</Text>
+          <Text fontSize='3xl' textColor='white'mt='2rem'>O plantio de árvores deve ocorrer durante as estações chuvosas, a partir de setembro. Para garantir o sucesso do desenvolvimento das mudas, é essencial controlar a presença de formigas ou usar proteções físicas para evitar danos.</Text>
         </Box>
-        <Box>
-          <Text as='b' fontSize='5xl'>ACOMPANHAMENTO VERDE</Text>
-          <Text fontSize='3xl'>O plantio de árvores deve ocorrer durante as estações chuvosas, a partir de setembro. Para garantir o sucesso do desenvolvimento das mudas, é essencial controlar a presença de formigas ou usar proteções físicas para evitar danos.</Text>
-        </Box>
-        <Box>
-          <Text as='b' fontSize='5xl'>Como Plantar e Cuidar de uma Arvore</Text>
-          <Text fontSize='3xl'>Para plantar e cuidar de uma árvore, escolha uma muda com mais de 1,5 metros de comprimento para minimizar danos por animais. Opte por espécies adequadas ao clima e solo local, como Angico, Araçá Amarelo, Canela, Ipê, Jacarandá, Aroeira, entre outras. Antes do plantio, mantenha a umidade das raízes. Cave um buraco ao lado da estaca contrária ao pasto, com 50 cm de diâmetro e profundidade o dobro do comprimento do torrão. Coloque a planta no buraco e cubra o torrão com 3 cm de terra, compactando ao redor. Regue a base e crie um muro ao redor da árvore para retenção de água. Use a estaca como protetor florestal para orientar o crescimento e proteger contra animais e vento.</Text>
+        <Box ml='4rem' mr='3rem' textAlign='justify'mt='2rem'>
+          <Text as='b' fontSize='5xl' textColor='white'>Como Plantar e Cuidar de uma Arvore</Text>
+          <Text fontSize='3xl' textColor='white'mt='2rem'>Para plantar e cuidar de uma árvore, escolha uma muda com mais de 1,5 metros de comprimento para minimizar danos por animais. Opte por espécies adequadas ao clima e solo local, como Angico, Araçá Amarelo, Canela, Ipê, Jacarandá, Aroeira, entre outras. Antes do plantio, mantenha a umidade das raízes. Cave um buraco ao lado da estaca contrária ao pasto, com 50 cm de diâmetro e profundidade o dobro do comprimento do torrão. Coloque a planta no buraco e cubra o torrão com 3 cm de terra, compactando ao redor. Regue a base e crie um muro ao redor da árvore para retenção de água. Use a estaca como protetor florestal para orientar o crescimento e proteger contra animais e vento.</Text>
         </Box>
       </Box>
+        
+      <Flex  bg='#343D3F'>
+        <Box boxSize='150px' ml='5rem' mr='3rem' >
+          <img src="./LogoPix.png" alt=""  />
+        </Box>
+        <Box ml='1rem' >
+            <Text as='b' fontSize='3xl' textColor='white'>DOAÇÕES</Text>
+            <Text fontSize='2xl' textColor='white'>Para doar, basta acessar o aplicativo do seu banco e realizar uma transferência via Pix para a chave: 1234567890. Agradecemos a sua contribuição!</Text>
+        </Box>
+      </Flex>
 
 
       <Flex bg='#343D3F' alignItems='center' justifyContent='space-around' >
