@@ -41,7 +41,7 @@ export default function Page() {
           <nav>
 
             <ul>
-              <Box display='flex'>
+              <Box display='flex' >
                 <li>
                   <Link href="#objetivo" p='4' textColor='white'>Objetivo</Link>
                 </li>
@@ -66,22 +66,45 @@ export default function Page() {
           </nav>
         </Box>
       </header>
-      <Box display='flex' justifyContent='center' p='2rem' backgroundColor='#343D3F'>
-        <Image
-          boxSize='500px'
-          height='100%'
-          objectFit='cover'
-          src='./estradaArvore.jpg'
-          alt='Dan Abramov'
 
-        />
+      <Box
+      display={{ base: 'flex', md: 'flex' }}
+      flexDirection={{ base: 'column', md: 'row' }}
+      justifyContent='center'
+      alignItems='center'
+      p='2rem'
+      backgroundColor='#343D3F'
+    >
+      <Image
+        boxSize={{ base: '300px', md: '500px' , }}
+        height='100%'
+        objectFit='cover'
+        src='./estradaArvore.jpg'
+        alt='Dan Abramov'
+        mx={{ base: 'auto', md: '0' }}
+        my={{ base: '2rem', md: '0' }}
+      />
 
-        <Text fontSize='50px' ml='3rem' mt='12rem' fontFamily='roboto' textColor='white' justifyContent='center' textAlign='left'>
-
-          Plantar mudas de árvores nativas  <br />no Pé da Estaca ao longo das cercas <br /> as  margens das estradas rurais do nosso município.
-          <Box display='flex' justifyContent='center'><Button variant='outline' colorScheme='green' border='1px' width='100%'>Junte-se a nós</Button></Box>
-        </Text>
-      </Box>
+      <Text
+        fontSize={{ base: '30px', md: '50px' }}
+        ml={{ base: '0', md: '3rem' }}
+        mt={{ base: '2rem', md: '12rem' }}
+        fontFamily='roboto'
+        textColor='white'
+        textAlign={{ base: 'center', md: 'left' }}
+      >
+        Plantar mudas de árvores nativas
+        <br />
+        no Pé da Estaca ao longo das cercas
+        <br />
+        as margens das estradas rurais do nosso município.
+        <Box display='flex' justifyContent='center'>
+          <Button variant='outline' colorScheme='green' border='1px' width='100%'>
+            Junte-se a nós
+          </Button>
+        </Box>
+      </Text>
+    </Box>
 
 
       <Box bg='#343D3F' >
