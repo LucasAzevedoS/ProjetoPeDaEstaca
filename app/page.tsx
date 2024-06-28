@@ -5,6 +5,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
+import { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import { Link } from '@chakra-ui/next-js'
@@ -17,20 +18,49 @@ import './globals.css'
 
 register();
 
-const data = [
-  { id: '1', image: './img1.jfif' },
-  { id: '2', image: './img2.jfif' },
-  { id: '3', image: './img3.jfif' },
-  { id: '4', image: './img4.jfif' },
-  { id: '5', image: './img5.jfif' },
-  { id: '6', image: './img6.jfif' },
-  { id: '7', image: './img7.jfif' },
-  { id: '8', image: './img8.jfif' },
-  { id: '9', image: './img9.jfif' },
-  { id: '10', image: './img10.jfif' },
-]
+
+
+
+
+
+
 export default function Page() {
 
+  const data = [
+    { id: '1', image: './img1.jfif' },
+    { id: '2', image: './img2.jfif' },
+    { id: '3', image: './img3.jfif' },
+    { id: '4', image: './img4.jfif' },
+    { id: '5', image: './img5.jfif' },
+    { id: '6', image: './img6.jfif' },
+    { id: '7', image: './img7.jfif' },
+    { id: '8', image: './img8.jfif' },
+    { id: '9', image: './img9.jfif' },
+    { id: '10', image: './img10.jfif' },
+  ]
+
+  const [slidesPerView, setSlidesPerView] = useState(4)
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 768) {
+        setSlidesPerView(1)
+      } else if (window.innerWidth < 992) {
+        setSlidesPerView(2)
+      } else if (window.innerWidth < 1200) {
+        setSlidesPerView(3)
+      } else {
+        setSlidesPerView(4)
+      }
+    }
+    handleResize();
+
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  },[])
+  
   return (
     <>
       <header>
@@ -76,7 +106,7 @@ export default function Page() {
       backgroundColor='#343D3F'
     >
       <Image
-        boxSize={{ base: '300px', md: '500px' , }}
+        boxSize={{ base: '300px', md: '500px' }}
         height='100%'
         objectFit='cover'
         src='./estradaArvore.jpg'
@@ -108,7 +138,15 @@ export default function Page() {
 
 
       <Box bg='#343D3F' >
-        <Text fontFamily='roboto' fontSize='1.5rem' color='white' textAlign='justify' mr='4rem' ml='6rem' letterSpacing={3} >
+        <Text 
+        fontSize={{ base: '1rem', md: '1.5rem'}}
+        fontFamily='roboto'  
+        color='white' 
+        textAlign='justify' 
+        mr={{ base: '1rem', md: '4rem'}}
+        ml={{ base: '1rem', md: '6rem'}}
+        
+        letterSpacing={3} >
           O projeto Pé da Estaca tem como objetivo desenvolver consciência critica social e ambiental do sistema que interliga a sociedade com interesse comum.<br></br>
           Para isso esse projeto ecológico Pé da Estaca visa plantar arvores nativas no pé da estaca a cada 50 ou 100 metros de distância as margens das estradas rurais e divisas em sítios e fazenda da região tendo como meta contribuir para o bem-estar animal, redução de gastos aos produtores, diminuição do aquecimento global, conservação ambiental e etc. no que resulta em qualidade de vida das pessoas, somando forças para preservar o nosso bem mais precioso.
           O projeto piloto foi desenvolvido na fazenda União e no Sitio Cahoeirinha de São Francisco na cidade de Visconde do Rio Branco Estado de Minas Gerais ao todo foram plantadas 200 mudas de arvores de Ipês branco, amarelo e roxo, Angico, Acácia, e árvores frutíferas.
@@ -116,7 +154,7 @@ export default function Page() {
       </Box>
 
       <Swiper className='swiper-container'
-        slidesPerView={4}
+        slidesPerView={slidesPerView}
         pagination={{ clickable: true }}
         navigation
       >
