@@ -14,15 +14,20 @@ import { Flex, Spacer } from '@chakra-ui/react'
 import { Text } from '@chakra-ui/react'
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import { Image } from '@chakra-ui/react'
+import {
+  Table,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Th,
+  Td,
+  TableCaption,
+  TableContainer,
+} from '@chakra-ui/react'
 import './globals.css'
 
 register();
-
-
-
-
-
-
 
 export default function Page() {
 
@@ -59,94 +64,87 @@ export default function Page() {
     return () => {
       window.removeEventListener('resize', handleResize)
     }
-  },[])
-  
+  }, [])
+
   return (
     <>
-      <header>
-        <Box display='flex' alignItems='center' justifyContent='space-between' width='100%' h='120px' backgroundColor='#343D3F' >
-          <div>
-            <img src="./icone.png" alt="" />
-          </div>
-          <nav>
+      <Flex backgroundColor='#343D3F' alignItems='center' justifyContent='space-between'
+        display={{ base: 'flex', md: 'flex' }}
+        flexDirection={{ base: 'column', md: 'row' }}>
 
-            <ul>
-              <Box display='flex' >
-                <li>
-                  <Link href="#objetivo" p='4' textColor='white'>Objetivo</Link>
-                </li>
-                <li>
-                  <Link href="/about" p='4' textColor='white'>Teste</Link>
-                </li>
-                <li>
-                  <Link href="/about" p='4' textColor='white'>Teste</Link>
-                </li>
-                <li>
-                  <Link href="/about" p='4' textColor='white'>Teste</Link>
-                </li>
-                <li>
-                  <Link href="/about" p='4' textColor='white'>Teste</Link>
-                </li>
-                <li>
-                  <Link href="/about" p='4' textColor='white'>Teste</Link>
-                </li>
-              </Box>
-            </ul>
-
-          </nav>
+        <Box 
+        boxSize='150px' 
+        ml={{ base: '0rem', md: '5rem' }}
+        mr={{ base: '0rem', md: '3rem' }} 
+        alignItems={{ base: 'center', md: 'flex-start' }}
+        >
+          <img src="./icone.png" alt="" />
         </Box>
-      </header>
+
+        <Box
+          display={{ base: 'flex', md: 'flex' }}
+          flexDirection={{ base: 'column', md: 'row' }}
+          mr={{ base: '0rem', md: '4rem' }}
+        >
+          <Link href="#objetivo" p='4' textColor='white'>Objetivo</Link>
+          <Link href="/about" p='4' textColor='white'>Teste</Link>
+          <Link href="/about" p='4' textColor='white'>Teste</Link>
+          <Link href="/about" p='4' textColor='white'>Teste</Link>
+          <Link href="/about" p='4' textColor='white'>Teste</Link>
+        </Box>
+
+      </Flex>
 
       <Box
-      display={{ base: 'flex', md: 'flex' }}
-      flexDirection={{ base: 'column', md: 'row' }}
-      justifyContent='center'
-      alignItems='center'
-      p='2rem'
-      backgroundColor='#343D3F'
-    >
-      <Image
-        boxSize={{ base: '300px', md: '500px' }}
-        height='100%'
-        objectFit='cover'
-        src='./estradaArvore.jpg'
-        alt='Dan Abramov'
-        mx={{ base: 'auto', md: '0' }}
-        my={{ base: '2rem', md: '0' }}
-      />
-
-      <Text
-        fontSize={{ base: '30px', md: '50px' }}
-        ml={{ base: '0', md: '3rem' }}
-        mt={{ base: '2rem', md: '12rem' }}
-        fontFamily='roboto'
-        textColor='white'
-        textAlign={{ base: 'center', md: 'left' }}
+        display={{ base: 'flex', md: 'flex' }}
+        flexDirection={{ base: 'column', md: 'row' }}
+        justifyContent='center'
+        alignItems='center'
+        p='2rem'
+        backgroundColor='#343D3F'
       >
-        Plantar mudas de árvores nativas
-        <br />
-        no Pé da Estaca ao longo das cercas
-        <br />
-        as margens das estradas rurais do nosso município.
-        <Box display='flex' justifyContent='center'>
-          <Button variant='outline' colorScheme='green' border='1px' width='100%'>
-            Junte-se a nós
-          </Button>
-        </Box>
-      </Text>
-    </Box>
+        <Image
+          boxSize={{ base: '400px', md: '500px' }}
+          height='100%'
+          objectFit='cover'
+          src='./estradaArvore.jpg'
+          alt='Dan Abramov'
+          mx={{ base: 'auto', md: '0' }}
+          my={{ base: '2rem', md: '0' }}
+        />
+
+        <Text
+          fontSize={{ base: '30px', md: '50px' }}
+          ml={{ base: '0', md: '3rem' }}
+          mt={{ base: '2rem', md: '12rem' }}
+          fontFamily='roboto'
+          textColor='white'
+          textAlign={{ base: 'center', md: 'left' }}
+        >
+          Plantar mudas de árvores nativas
+          <br />
+          no Pé da Estaca ao longo das cercas
+          <br />
+          as margens das estradas rurais do nosso município.
+          <Box display='flex' justifyContent='center'>
+            <Button variant='outline' colorScheme='green' border='1px' width='100%'>
+              Junte-se a nós
+            </Button>
+          </Box>
+        </Text>
+      </Box>
 
 
       <Box bg='#343D3F' >
-        <Text 
-        fontSize={{ base: '1rem', md: '1.5rem'}}
-        fontFamily='roboto'  
-        color='white' 
-        textAlign='justify' 
-        mr={{ base: '1rem', md: '4rem'}}
-        ml={{ base: '1rem', md: '6rem'}}
-        
-        letterSpacing={3} >
+        <Text
+          fontSize={{ base: '1rem', md: '1.5rem' }}
+          fontFamily='roboto'
+          color='white'
+          textAlign='justify'
+          mr={{ base: '1rem', md: '4rem' }}
+          ml={{ base: '1rem', md: '6rem' }}
+
+          letterSpacing={3} >
           O projeto Pé da Estaca tem como objetivo desenvolver consciência critica social e ambiental do sistema que interliga a sociedade com interesse comum.<br></br>
           Para isso esse projeto ecológico Pé da Estaca visa plantar arvores nativas no pé da estaca a cada 50 ou 100 metros de distância as margens das estradas rurais e divisas em sítios e fazenda da região tendo como meta contribuir para o bem-estar animal, redução de gastos aos produtores, diminuição do aquecimento global, conservação ambiental e etc. no que resulta em qualidade de vida das pessoas, somando forças para preservar o nosso bem mais precioso.
           O projeto piloto foi desenvolvido na fazenda União e no Sitio Cahoeirinha de São Francisco na cidade de Visconde do Rio Branco Estado de Minas Gerais ao todo foram plantadas 200 mudas de arvores de Ipês branco, amarelo e roxo, Angico, Acácia, e árvores frutíferas.
@@ -177,21 +175,21 @@ export default function Page() {
         </Box >
         <Box ml='4rem' mr='3rem' mt='2rem'>
           <Text as='b' fontSize='5xl' textColor='white'>ACOMPANHAMENTO VERDE</Text>
-          <Text fontSize='3xl' textColor='white'mt='2rem'>O plantio de árvores deve ocorrer durante as estações chuvosas, a partir de setembro. Para garantir o sucesso do desenvolvimento das mudas, é essencial controlar a presença de formigas ou usar proteções físicas para evitar danos.</Text>
+          <Text fontSize='3xl' textColor='white' mt='2rem'>O plantio de árvores deve ocorrer durante as estações chuvosas, a partir de setembro. Para garantir o sucesso do desenvolvimento das mudas, é essencial controlar a presença de formigas ou usar proteções físicas para evitar danos.</Text>
         </Box>
-        <Box ml='4rem' mr='3rem' textAlign='justify'mt='2rem'>
+        <Box ml='4rem' mr='3rem' textAlign='justify' mt='2rem'>
           <Text as='b' fontSize='5xl' textColor='white'>Como Plantar e Cuidar de uma Arvore</Text>
-          <Text fontSize='3xl' textColor='white'mt='2rem'>Para plantar e cuidar de uma árvore, escolha uma muda com mais de 1,5 metros de comprimento para minimizar danos por animais. Opte por espécies adequadas ao clima e solo local, como Angico, Araçá Amarelo, Canela, Ipê, Jacarandá, Aroeira, entre outras. Antes do plantio, mantenha a umidade das raízes. Cave um buraco ao lado da estaca contrária ao pasto, com 50 cm de diâmetro e profundidade o dobro do comprimento do torrão. Coloque a planta no buraco e cubra o torrão com 3 cm de terra, compactando ao redor. Regue a base e crie um muro ao redor da árvore para retenção de água. Use a estaca como protetor florestal para orientar o crescimento e proteger contra animais e vento.</Text>
+          <Text fontSize='3xl' textColor='white' mt='2rem'>Para plantar e cuidar de uma árvore, escolha uma muda com mais de 1,5 metros de comprimento para minimizar danos por animais. Opte por espécies adequadas ao clima e solo local, como Angico, Araçá Amarelo, Canela, Ipê, Jacarandá, Aroeira, entre outras. Antes do plantio, mantenha a umidade das raízes. Cave um buraco ao lado da estaca contrária ao pasto, com 50 cm de diâmetro e profundidade o dobro do comprimento do torrão. Coloque a planta no buraco e cubra o torrão com 3 cm de terra, compactando ao redor. Regue a base e crie um muro ao redor da árvore para retenção de água. Use a estaca como protetor florestal para orientar o crescimento e proteger contra animais e vento.</Text>
         </Box>
       </Box>
-        
-      <Flex  bg='#343D3F'>
+
+      <Flex bg='#343D3F'>
         <Box boxSize='150px' ml='5rem' mr='3rem' >
-          <img src="./LogoPix.png" alt=""  />
+          <img src="./LogoPix.png" alt="" />
         </Box>
         <Box ml='1rem' >
-            <Text as='b' fontSize='3xl' textColor='white'>DOAÇÕES</Text>
-            <Text fontSize='2xl' textColor='white'>Para doar, basta acessar o aplicativo do seu banco e realizar uma transferência via Pix para a chave: 1234567890. Agradecemos a sua contribuição!</Text>
+          <Text as='b' fontSize='3xl' textColor='white'>DOAÇÕES</Text>
+          <Text fontSize='2xl' textColor='white'>Para doar, basta acessar o aplicativo do seu banco e realizar uma transferência via Pix para a chave: 1234567890. Agradecemos a sua contribuição!</Text>
         </Box>
       </Flex>
 
