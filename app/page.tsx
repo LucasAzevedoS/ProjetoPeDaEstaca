@@ -87,11 +87,11 @@ export default function Page() {
             mr={{ base: '0rem', md: '4rem' }}
             alignItems={{ base: 'center', md: 'flex-end' }}
           >
-            <Link href="#objetivo" p='4' textColor='white'>Objetivo</Link>
-            <Link href="#imagens" p='4' textColor='white'>Imagens</Link>
-            <Link href="#cfunciona" p='4' textColor='white'>Como funciona</Link>
-            <Link href="#doacoes" p='4' textColor='white'>Agenda Verde</Link>
-            <Link href="#contato" p='4' textColor='white'>Entre em contato</Link>
+            <Link href="#objetivo" p='4' textColor='#35855A'>Objetivo</Link>
+            <Link href="#imagens" p='4' textColor='#35855A'>Imagens</Link>
+            <Link href="#cfunciona" p='4' textColor='#35855A'>Como funciona</Link>
+            <Link href="#doacoes" p='4' textColor='#35855A'>Agenda Verde</Link>
+            <Link href="#contato" p='4' textColor='#35855A'>Entre em contato</Link>
           </Box>
 
         </Flex>
@@ -119,7 +119,7 @@ export default function Page() {
             ml={{ base: '0', md: '3rem' }}
             mt={{ base: '2rem', md: '12rem' }}
             fontFamily='roboto'
-            textColor='white'
+            textColor='#35855A'
             textAlign={{ base: 'center', md: 'left' }}
           >
             Plantar mudas de árvores nativas
@@ -152,7 +152,7 @@ export default function Page() {
               color='white'
               mt='2rem'
               as='b'
-              textColor='#8F9779'>
+              textColor='#35855A'>
               
               OBJETIVO
             </Text>
@@ -208,7 +208,7 @@ export default function Page() {
               as='b'
               fontSize={{ base: '2rem', md: '3rem' }}
               textColor='white' >
-              <Box as="span" color="#8F9779">COMO</Box> FUNCIONA
+              <Box as="span" color="#35855A">COMO</Box> FUNCIONA
             </Text>
 
             <Text
@@ -234,7 +234,7 @@ export default function Page() {
 
 
               textColor='white'>
-                <Box as="span" color="#8F9779">ACOMPANHAMENTO</Box> VERDE</Text>
+                <Box as="span" color="#35855A">ACOMPANHAMENTO</Box> VERDE</Text>
             <Text
               fontSize={{ base: '1.2rem', md: '1.5rem' }}
               textAlign={{ base: 'justify', md: 'justify' }}
@@ -256,7 +256,7 @@ export default function Page() {
               fontSize={{ base: '2rem', md: '3rem' }}
 
               textColor='white'>
-                <Box as="span" color="#8F9779">COMO</Box> Plantar e<br />  Cuidar da arovore</Text>
+                <Box as="span" color="#35855A">COMO</Box> Plantar e<br />  Cuidar da arovore</Text>
             <Text
               fontSize={{ base: '1.2rem', md: '1.5rem' }}
               textAlign={{ base: 'justify', md: 'justify' }}
@@ -292,7 +292,7 @@ export default function Page() {
               as='b'
               fontSize={{ base: '1.2rem', md: '1.5rem' }}
               textAlign={{ base: 'center', md: 'justify' }}
-              textColor='#8F9779'>
+              textColor='#35855A'>
               Chave: 32 9145-3325
             </Text>
           </Box>
