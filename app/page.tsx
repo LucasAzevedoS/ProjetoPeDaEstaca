@@ -64,7 +64,7 @@ export default function Page() {
       window.removeEventListener('resize', handleResize)
     }
   }, [])
-  
+
   return (
     <>
       <Box bg='#343D3F'>
@@ -90,7 +90,7 @@ export default function Page() {
             <Link href="#objetivo" p='4' textColor='white'>Objetivo</Link>
             <Link href="#imagens" p='4' textColor='white'>Imagens</Link>
             <Link href="#cfunciona" p='4' textColor='white'>Como funciona</Link>
-            <Link href="#doacoes" p='4' textColor='white'>Doaçoes</Link>
+            <Link href="#doacoes" p='4' textColor='white'>Agenda Verde</Link>
             <Link href="#contato" p='4' textColor='white'>Entre em contato</Link>
           </Box>
 
@@ -105,9 +105,9 @@ export default function Page() {
           backgroundColor='#343D3F'
         >
           <Image
-            boxSize={{ base: '400px', md: '500px' }}
+            boxSize={{ base: '400px', md: '700px' }}
             height='100%'
-            objectFit='cover'
+            objectFit='contain'
             src='./estradaArvore.jpg'
             alt='Dan Abramov'
             mx={{ base: 'auto', md: '0' }}
@@ -128,16 +128,20 @@ export default function Page() {
             <br />
             as margens das estradas rurais do nosso município.
             <Box display='flex' justifyContent='center'>
-              <Button variant='outline' colorScheme='green' border='1px' width='100%'>
+              <Button variant='outline' colorScheme='green' border='1px' width='100%' fontSize={{base:'1.4rem', md:'1.6rem'}}>
                 Junte-se a nós
               </Button>
             </Box>
           </Text>
         </Box>
-    
+
         <div id="objetivo"></div>
         <Box>
           <Box
+            display='flex'
+            flexDirection='column'
+            justifyContent='center'
+            alignItems='center'
             mr={{ base: '1rem', md: '4rem' }}
             ml={{ base: '1rem', md: '6rem' }}>
 
@@ -147,7 +151,9 @@ export default function Page() {
               fontFamily='roboto'
               color='white'
               mt='2rem'
-              as='b'>
+              as='b'
+              textColor='#8F9779'>
+              
               OBJETIVO
             </Text>
 
@@ -165,26 +171,36 @@ export default function Page() {
             </Text>
           </Box>
         </Box>
-        <div id="imagens"></div>
-        <Swiper className='swiper-container'
-          slidesPerView={slidesPerView}
-          pagination={{ clickable: true }}
-          navigation
+        
+        <Box
+        mb='10rem'
+        mt='10rem'
         >
-          {data.map((item) => (
-            <SwiperSlide key={item.id}>
-              <img
-                src={item.image}
-                alt='slider'
-                className='slider-item'
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+          <div id="imagens"></div>
+          <Swiper className='swiper-container'
+            slidesPerView={slidesPerView}
+            pagination={{ clickable: true }}
+            navigation
+          >
+            {data.map((item) => (
+              <SwiperSlide key={item.id}>
+                <img
+                  src={item.image}
+                  alt='slider'
+                  className='slider-item'
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Box>
 
         <div id="cfunciona"></div>
-        <Box bg='#343D3F' >
+        <Box>
           <Box
+            display='flex'
+            flexDirection='column'
+            justifyContent='center'
+            alignItems='center'
             ml={{ base: '1rem', md: '4rem' }}
             mr={{ base: '1rem', md: '3rem' }}
             mt='2rem'>
@@ -192,7 +208,7 @@ export default function Page() {
               as='b'
               fontSize={{ base: '2rem', md: '3rem' }}
               textColor='white' >
-              COMO FUNCIONA
+              <Box as="span" color="#8F9779">COMO</Box> FUNCIONA
             </Text>
 
             <Text
@@ -200,12 +216,16 @@ export default function Page() {
               textAlign={{ base: 'justify', md: 'justify' }}
               textColor='white'
               mt='2rem'>
-              O projeto convida fazendeiros e sitiantes locais a colaborar cedendo áreas próximas às divisas e margens das estradas para promover mudanças ambientais. Estudantes, ONGs, igrejas e voluntários interessados na conservação ambiental são incentivados a participar. Os voluntários plantarão e cuidarão de árvores nativas até que se tornem adultas, sendo que cada árvore plantada levará o nome do participante.
+              O projeto convida fazendeiros e sitiantes locais a colaborar cedendo áreas próximas às divisas e margens das estradas para promover mudanças ambientais. Estudantes, ONGs, igrejas e voluntários interessados na conservação ambiental são incentivados a participar. Os voluntários irão plantar e cuidar das mudas nativas nativas até que se tornem adultas, sendo que cada árvore plantada levará o nome do participante.
             </Text>
 
           </Box >
 
           <Box
+            display='flex'
+            flexDirection='column'
+            justifyContent='center'
+            alignItems='center'
             ml={{ base: '1rem', md: '4rem' }}
             mr={{ base: '1rem', md: '3rem' }}
             mt='2rem'>
@@ -213,22 +233,30 @@ export default function Page() {
               fontSize={{ base: '2rem', md: '3rem' }}
 
 
-              textColor='white'>ACOMPANHAMENTO VERDE</Text>
+              textColor='white'>
+                <Box as="span" color="#8F9779">ACOMPANHAMENTO</Box> VERDE</Text>
             <Text
               fontSize={{ base: '1.2rem', md: '1.5rem' }}
               textAlign={{ base: 'justify', md: 'justify' }}
               textColor='white'
               mt='2rem'>O plantio de árvores deve ocorrer durante as estações chuvosas, a partir de setembro. Para garantir o sucesso do desenvolvimento das mudas, é essencial controlar a presença de formigas ou usar proteções físicas para evitar danos.</Text>
           </Box>
+
+
           <Box
+            display='flex'
+            flexDirection='column'
+            justifyContent='center'
+            alignItems='center'
             ml={{ base: '1rem', md: '4rem' }}
             mr={{ base: '1rem', md: '3rem' }}
             mt='2rem'
-            textAlign='justify'>
+          >
             <Text as='b'
               fontSize={{ base: '2rem', md: '3rem' }}
 
-              textColor='white'>Como Plantar e Cuidar de uma Arvore</Text>
+              textColor='white'>
+                <Box as="span" color="#8F9779">COMO</Box> Plantar e<br />  Cuidar da arovore</Text>
             <Text
               fontSize={{ base: '1.2rem', md: '1.5rem' }}
               textAlign={{ base: 'justify', md: 'justify' }}
@@ -237,14 +265,15 @@ export default function Page() {
           </Box>
         </Box>
 
-        <Flex bg='#343D3F'
+        <Flex
           justifyContent='center'
           display={{ base: 'flex', md: 'flex' }}
           flexDirection={{ base: 'column', md: 'row' }}
-          alignItems='center'>
+          alignItems='center'
+          mt='2rem'>
 
           <Box
-            boxSize='150px' >
+            boxSize='100px' >
             <a href="#"><img src="./LogoPix.png" alt="" /></a>
           </Box>
 
@@ -257,12 +286,15 @@ export default function Page() {
               as='b'
               fontSize={{ base: '1.2rem', md: '1.5rem' }}
               textAlign={{ base: 'center', md: 'justify' }}
-              textColor='white'>Apoie o projeto Pé da Estaca com doações via Pix!
+              textColor='white'>Apoie o projeto Pé da Estaca com doações via Pix!<br />
             </Text>
             <Text
+              as='b'
               fontSize={{ base: '1.2rem', md: '1.5rem' }}
               textAlign={{ base: 'center', md: 'justify' }}
-              textColor='white'>Para doar, basta acessar o aplicativo do seu banco e realizar uma transferência via Pix para a chave: 1234567890. Agradecemos a sua contribuição!</Text>
+              textColor='#8F9779'>
+              Chave: 32 9145-3325
+            </Text>
           </Box>
         </Flex>
 
