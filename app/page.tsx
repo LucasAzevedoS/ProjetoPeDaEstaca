@@ -87,11 +87,11 @@ export default function Page() {
             mr={{ base: '0rem', md: '4rem' }}
             alignItems={{ base: 'center', md: 'flex-end' }}
           >
-            <Link href="#objetivo" p='4' textColor='#35855A'>Objetivo</Link>
-            <Link href="#imagens" p='4' textColor='#35855A'>Imagens</Link>
-            <Link href="#cfunciona" p='4' textColor='#35855A'>Como funciona</Link>
-            <Link href="#doacoes" p='4' textColor='#35855A'>Agenda Verde</Link>
-            <Link href="#contato" p='4' textColor='#35855A'>Entre em contato</Link>
+            <Link href="#objetivo" p='4' textColor='#80ED99'>Objetivo</Link>
+            <Link href="#imagens" p='4' textColor='#80ED99'>Imagens</Link>
+            <Link href="#cfunciona" p='4' textColor='#80ED99'>Como funciona</Link>
+            <Link href="#doacoes" p='4' textColor='#80ED99'>Agenda Verde</Link>
+            <Link href="#contato" p='4' textColor='#80ED99'>Entre em contato</Link>
           </Box>
 
         </Flex>
@@ -115,11 +115,11 @@ export default function Page() {
           />
 
           <Text
-            fontSize={{ base: '30px', md: '50px' }}
+            fontSize={{ base: '30px', md: '35px', lg: '40px', xl: '50px' }}
             ml={{ base: '0', md: '3rem' }}
             mt={{ base: '2rem', md: '12rem' }}
             fontFamily='roboto'
-            textColor='#35855A'
+            textColor='#80ED99'
             textAlign={{ base: 'center', md: 'left' }}
           >
             Plantar mudas de árvores nativas
@@ -152,7 +152,7 @@ export default function Page() {
               color='white'
               mt='2rem'
               as='b'
-              textColor='#35855A'>
+              textColor='#80ED99'>
               
               OBJETIVO
             </Text>
@@ -208,7 +208,7 @@ export default function Page() {
               as='b'
               fontSize={{ base: '2rem', md: '3rem' }}
               textColor='white' >
-              <Box as="span" color="#35855A">COMO</Box> FUNCIONA
+              <Box as="span" color="#80ED99">COMO</Box> FUNCIONA
             </Text>
 
             <Text
@@ -216,7 +216,7 @@ export default function Page() {
               textAlign={{ base: 'justify', md: 'justify' }}
               textColor='white'
               mt='2rem'>
-              O projeto convida fazendeiros e sitiantes locais a colaborar cedendo áreas próximas às divisas e margens das estradas para promover mudanças ambientais. Estudantes, ONGs, igrejas e voluntários interessados na conservação ambiental são incentivados a participar. Os voluntários irão plantar e cuidar das mudas nativas nativas até que se tornem adultas, sendo que cada árvore plantada levará o nome do participante.
+              O projeto convida fazendeiros e sitiantes locais a colaborar cedendo áreas próximas às divisas e margens das estradas para promover mudanças ambientais. Estudantes, ONGs, igrejas e voluntários interessados na conservação ambiental são incentivados a participar. Os voluntários irão plantar e cuidar das mudas nativas até que se tornem adultas, sendo que cada árvore plantada levará o nome do participante.
             </Text>
 
           </Box >
@@ -234,7 +234,7 @@ export default function Page() {
 
 
               textColor='white'>
-                <Box as="span" color="#35855A">ACOMPANHAMENTO</Box> VERDE</Text>
+                <Box as="span" color="#80ED99">ACOMPANHAMENTO</Box> VERDE</Text>
             <Text
               fontSize={{ base: '1.2rem', md: '1.5rem' }}
               textAlign={{ base: 'justify', md: 'justify' }}
@@ -256,7 +256,7 @@ export default function Page() {
               fontSize={{ base: '2rem', md: '3rem' }}
 
               textColor='white'>
-                <Box as="span" color="#35855A">COMO</Box> Plantar e<br />  Cuidar da arovore</Text>
+                <Box as="span" color="#80ED99">COMO</Box> PLANTAR E<br />  CUIDAR DA ARVORE</Text>
             <Text
               fontSize={{ base: '1.2rem', md: '1.5rem' }}
               textAlign={{ base: 'justify', md: 'justify' }}
@@ -292,7 +292,7 @@ export default function Page() {
               as='b'
               fontSize={{ base: '1.2rem', md: '1.5rem' }}
               textAlign={{ base: 'center', md: 'justify' }}
-              textColor='#35855A'>
+              textColor='#80ED99'>
               Chave: 32 9145-3325
             </Text>
           </Box>
@@ -327,10 +327,6 @@ export default function Page() {
               ‎ Que São Francisco nos abençoe, amém!
               O Meio Ambiente, agradece!
             </Text>
-          </Box>
-
-          <Box p='1rem'>
-            <img src="./francisco.jfif" alt="imagem de Sáo Francisco de Assis" />
           </Box>
         </Flex>
 
