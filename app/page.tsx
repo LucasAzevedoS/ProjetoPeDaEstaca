@@ -13,6 +13,7 @@ import { Flex, Spacer } from '@chakra-ui/react'
 import { Text } from '@chakra-ui/react'
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import { Image } from '@chakra-ui/react'
+import emailjs from '@emailjs/browser'
 import {
   Table,
   Thead,
@@ -64,6 +65,35 @@ export default function Page() {
       window.removeEventListener('resize', handleResize)
     }
   }, [])
+
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    if (name === '' || email === '' || message === '') {
+      alert('Preencha todos os campos!')
+      return;
+    }
+
+    const templateParams = {
+      from_name: name,
+      message: message,
+      email: email
+    }
+    emailjs.send('service_az5mu5z', 'template_2hzmxfq', templateParams, 'r0wxUY5rfKVX0fimo')
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setName('')
+        setEmail('')
+        setMessage('')
+        alert('Mensagem enviada com sucesso!')
+      }, (err) => {
+        console.log('FAILED...', err);
+      })
+  }
 
   return (
     <>
@@ -128,7 +158,7 @@ export default function Page() {
             <br />
             as margens das estradas rurais do nosso município.
             <Box display='flex' justifyContent='center'>
-              <Button variant='outline' colorScheme='green' border='1px' width='100%' fontSize={{base:'1.4rem', md:'1.6rem'}}>
+              <Button variant='outline' colorScheme='green' border='1px' width='100%' fontSize={{ base: '1.4rem', md: '1.6rem' }}>
                 Junte-se a nós
               </Button>
             </Box>
@@ -153,7 +183,7 @@ export default function Page() {
               mt='2rem'
               as='b'
               textColor='#80ED99'>
-              
+
               OBJETIVO
             </Text>
 
@@ -171,10 +201,10 @@ export default function Page() {
             </Text>
           </Box>
         </Box>
-        
+
         <Box
-        mb='10rem'
-        mt='10rem'
+          mb='10rem'
+          mt='10rem'
         >
           <div id="imagens"></div>
           <Swiper className='swiper-container'
@@ -234,7 +264,7 @@ export default function Page() {
 
 
               textColor='white'>
-                <Box as="span" color="#80ED99">ACOMPANHAMENTO</Box> VERDE</Text>
+              <Box as="span" color="#80ED99">ACOMPANHAMENTO</Box> VERDE</Text>
             <Text
               fontSize={{ base: '1.2rem', md: '1.5rem' }}
               textAlign={{ base: 'justify', md: 'justify' }}
@@ -256,7 +286,7 @@ export default function Page() {
               fontSize={{ base: '2rem', md: '3rem' }}
 
               textColor='white'>
-                <Box as="span" color="#80ED99">COMO</Box> PLANTAR E<br />  CUIDAR DA ARVORE</Text>
+              <Box as="span" color="#80ED99">COMO</Box> PLANTAR E<br />  CUIDAR DA ARVORE</Text>
             <Text
               fontSize={{ base: '1.2rem', md: '1.5rem' }}
               textAlign={{ base: 'justify', md: 'justify' }}
@@ -298,6 +328,52 @@ export default function Page() {
           </Box>
         </Flex>
 
+        <Box
+          display={{ base: 'flex', md: 'flex' }}
+          flexDirection={{ base: 'column', md: 'column' }}
+        >
+
+
+        </Box>
+
+        <Box
+          display='flex'
+          flexDirection='column'
+          alignItems='center'
+          mt='2rem'>
+
+          <Text
+            fontSize={{ base: '2rem', md: '3rem' }}
+            textColor='#80ED99'>Contato</Text>
+          <form className="form" onSubmit={sendEmail}>
+            <input
+              className="input"
+              type="text"
+              placeholder="Digite seu nome"
+              onChange={(e) => setName(e.target.value)}
+              value={name}
+            />
+
+            <input
+              className="input"
+              type="text"
+              placeholder="Digite seu email"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+            />
+
+            <textarea
+              className="textarea"
+              placeholder="Digite sua mensagem..."
+              onChange={(e) => setMessage(e.target.value)}
+              value={message}
+            />
+
+            <input className="button" type="submit" value="Enviar" />
+          </form>
+        </Box>
+
+
 
         <Flex bg='#343D3F'
           justifyContent='center'
@@ -329,6 +405,8 @@ export default function Page() {
             </Text>
           </Box>
         </Flex>
+
+
 
 
       </Box >
