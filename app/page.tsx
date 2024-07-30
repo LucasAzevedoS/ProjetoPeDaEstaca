@@ -121,7 +121,7 @@ export default function Page() {
               <Link href="#objetivo" p='4' textColor='#80ED99'>Objetivo</Link>
               <Link href="#imagens" p='4' textColor='#80ED99'>Imagens</Link>
               <Link href="#cfunciona" p='4' textColor='#80ED99'>Como funciona</Link>
-              <Link href="#doacoes" p='4' textColor='#80ED99'>Agenda Verde</Link>
+              <Link href="#averde" p='4' textColor='#80ED99'>Agenda Verde</Link>
               <Link href="#contato" p='4' textColor='#80ED99'>Entre em contato</Link>
             </Box>
 
@@ -305,7 +305,7 @@ export default function Page() {
               <a href="#"><img src="./LogoPix.png" alt="" /></a>
             </Box>
 
-            <div id="doacoes"></div>
+            
             <Box
               ml={{ base: '0.3rem', md: '1rem' }}
             >
@@ -341,7 +341,10 @@ export default function Page() {
             mt='2rem'
             ml={{ base: '1rem', md: '4rem' }}
             mr={{ base: '1rem', md: '3rem' }}>
+            
+            <div id='contato'>
 
+            </div>
 
             <Text
               fontSize={{ base: '2rem', md: '3rem' }}
