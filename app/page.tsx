@@ -98,318 +98,330 @@ export default function Page() {
   return (
     <>
       <Box bg='#343D3F'>
-        <Flex backgroundColor='#343D3F' alignItems='center' justifyContent='space-between'
-          display={{ base: 'flex', md: 'flex' }}
-          flexDirection={{ base: 'column', md: 'row' }}>
+        <Box >
+          <Flex backgroundColor='#343D3F' alignItems='center' justifyContent='space-between'
+            display={{ base: 'flex', md: 'flex' }}
+            flexDirection={{ base: 'column', md: 'row' }}>
 
-          <Box
-            boxSize='150px'
-            ml={{ base: '0rem', md: '5rem' }}
-            mr={{ base: '0rem', md: '3rem' }}
-            alignItems={{ base: 'center', md: 'flex-start' }}
-          >
-            <img src="./icone.png" alt="" />
-          </Box>
+            <Box
+              boxSize='150px'
+              ml={{ base: '0rem', md: '5rem' }}
+              mr={{ base: '0rem', md: '3rem' }}
+              alignItems={{ base: 'center', md: 'flex-start' }}
+            >
+              <img src="./icone.png" alt="" />
+            </Box>
+
+            <Box
+              display={{ base: 'flex', md: 'flex' }}
+              flexDirection={{ base: 'column', md: 'row' }}
+              mr={{ base: '0rem', md: '4rem' }}
+              alignItems={{ base: 'center', md: 'flex-end' }}
+            >
+              <Link href="#objetivo" p='4' textColor='#80ED99'>Objetivo</Link>
+              <Link href="#imagens" p='4' textColor='#80ED99'>Imagens</Link>
+              <Link href="#cfunciona" p='4' textColor='#80ED99'>Como funciona</Link>
+              <Link href="#doacoes" p='4' textColor='#80ED99'>Agenda Verde</Link>
+              <Link href="#contato" p='4' textColor='#80ED99'>Entre em contato</Link>
+            </Box>
+
+          </Flex>
 
           <Box
             display={{ base: 'flex', md: 'flex' }}
             flexDirection={{ base: 'column', md: 'row' }}
-            mr={{ base: '0rem', md: '4rem' }}
-            alignItems={{ base: 'center', md: 'flex-end' }}
+            justifyContent='center'
+            alignItems='center'
+            p='2rem'
+            backgroundColor='#343D3F'
           >
-            <Link href="#objetivo" p='4' textColor='#80ED99'>Objetivo</Link>
-            <Link href="#imagens" p='4' textColor='#80ED99'>Imagens</Link>
-            <Link href="#cfunciona" p='4' textColor='#80ED99'>Como funciona</Link>
-            <Link href="#doacoes" p='4' textColor='#80ED99'>Agenda Verde</Link>
-            <Link href="#contato" p='4' textColor='#80ED99'>Entre em contato</Link>
+            <Image
+              boxSize={{ base: '400px', md: '700px' }}
+              height='100%'
+              objectFit='contain'
+              src='./estradaArvore.jpg'
+              alt='Dan Abramov'
+              mx={{ base: 'auto', md: '0' }}
+              my={{ base: '2rem', md: '0' }}
+            />
+
+            <Text
+              fontSize={{ base: '30px', md: '35px', lg: '40px', xl: '50px' }}
+              ml={{ base: '0', md: '3rem' }}
+              mt={{ base: '2rem', md: '12rem' }}
+              fontFamily='arial'
+              textColor='#80ED99'
+              textAlign={{ base: 'center', md: 'left' }}
+            >
+              Plantar mudas de árvores nativas
+              <br />
+              no Pé da Estaca ao longo das cercas
+              <br />
+              as margens das estradas rurais do nosso município.
+              <Box display='flex' justifyContent='center' mr={{ base: '0rem', md: '4rem' }}>
+                <Button variant='outline' colorScheme='green' border='1px' width='100%' fontSize={{ base: '1.4rem', md: '1.6rem' }}>
+                  Junte-se a nós
+                </Button>
+              </Box>
+            </Text>
           </Box>
 
-        </Flex>
+          <div id="objetivo"></div>
+          <Box>
+            <Box
+              display='flex'
+              flexDirection='column'
+              justifyContent='center'
+              alignItems='center'
+              mr={{ base: '1rem', md: '4rem' }}
+              ml={{ base: '1rem', md: '6rem' }}>
 
-        <Box
-          display={{ base: 'flex', md: 'flex' }}
-          flexDirection={{ base: 'column', md: 'row' }}
-          justifyContent='center'
-          alignItems='center'
-          p='2rem'
-          backgroundColor='#343D3F'
-        >
-          <Image
-            boxSize={{ base: '400px', md: '700px' }}
-            height='100%'
-            objectFit='contain'
-            src='./estradaArvore.jpg'
-            alt='Dan Abramov'
-            mx={{ base: 'auto', md: '0' }}
-            my={{ base: '2rem', md: '0' }}
-          />
+              <Text
+                id='objetivo'
+                fontSize={{ base: '2rem', md: '3rem' }}
+                fontFamily='roboto'
+                color='white'
+                mt='2rem'
+                as='b'
+                textColor='#80ED99'>
 
-          <Text
-            fontSize={{ base: '30px', md: '35px', lg: '40px', xl: '50px' }}
-            ml={{ base: '0', md: '3rem' }}
-            mt={{ base: '2rem', md: '12rem' }}
-            fontFamily='roboto'
-            textColor='#80ED99'
-            textAlign={{ base: 'center', md: 'left' }}
-          >
-            Plantar mudas de árvores nativas
-            <br />
-            no Pé da Estaca ao longo das cercas
-            <br />
-            as margens das estradas rurais do nosso município.
-            <Box display='flex' justifyContent='center'>
-              <Button variant='outline' colorScheme='green' border='1px' width='100%' fontSize={{ base: '1.4rem', md: '1.6rem' }}>
-                Junte-se a nós
-              </Button>
+                OBJETIVO
+              </Text>
+
+              <Text
+                fontSize={{ base: '1rem', md: '1.5rem' }}
+                fontFamily='roboto'
+                color='white'
+                textAlign='justify' >
+                O projeto Pé da Estaca tem como objetivo desenvolver consciência crítica social e ambiental do sistema que interliga a sociedade com interesse comum.<br></br>
+                Para isso esse projeto ecológico Pé da Estaca visa plantar árvores nativas no pé da estaca a cada 50 ou 100 metros de distância as margens das estradas rurais e divisas em sítios e fazenda da região tendo como meta contribuir para o bem-estar animal, redução de gastos aos produtores, diminuição do aquecimento global, conservação ambiental e etc. no que resulta em qualidade de vida das pessoas, somando forças para preservar o nosso bem mais precioso.
+                O projeto piloto foi desenvolvido na fazenda União e no Sítio Cachoeirinha de São Francisco na cidade de Visconde do Rio Branco Estado de Minas Gerais ao todo foram plantadas 200 mudas de arvores de Ipês branco, amarelo e roxo, Angico, Acácia, e árvores frutíferas.
+              </Text>
             </Box>
-          </Text>
-        </Box>
-
-        <div id="objetivo"></div>
-        <Box>
-          <Box
-            display='flex'
-            flexDirection='column'
-            justifyContent='center'
-            alignItems='center'
-            mr={{ base: '1rem', md: '4rem' }}
-            ml={{ base: '1rem', md: '6rem' }}>
-
-            <Text
-              id='objetivo'
-              fontSize={{ base: '2rem', md: '3rem' }}
-              fontFamily='roboto'
-              color='white'
-              mt='2rem'
-              as='b'
-              textColor='#80ED99'>
-
-              OBJETIVO
-            </Text>
-
-            <Text
-              fontSize={{ base: '1rem', md: '1.5rem' }}
-              fontFamily='roboto'
-              color='white'
-              textAlign='justify'
-
-
-              letterSpacing={3} >
-              O projeto Pé da Estaca tem como objetivo desenvolver consciência critica social e ambiental do sistema que interliga a sociedade com interesse comum.<br></br>
-              Para isso esse projeto ecológico Pé da Estaca visa plantar arvores nativas no pé da estaca a cada 50 ou 100 metros de distância as margens das estradas rurais e divisas em sítios e fazenda da região tendo como meta contribuir para o bem-estar animal, redução de gastos aos produtores, diminuição do aquecimento global, conservação ambiental e etc. no que resulta em qualidade de vida das pessoas, somando forças para preservar o nosso bem mais precioso.
-              O projeto piloto foi desenvolvido na fazenda União e no Sitio Cahoeirinha de São Francisco na cidade de Visconde do Rio Branco Estado de Minas Gerais ao todo foram plantadas 200 mudas de arvores de Ipês branco, amarelo e roxo, Angico, Acácia, e árvores frutíferas.
-            </Text>
           </Box>
-        </Box>
 
-        <Box
-          mb='10rem'
-          mt='10rem'
-        >
-          <div id="imagens"></div>
-          <Swiper className='swiper-container'
-            slidesPerView={slidesPerView}
-            pagination={{ clickable: true }}
-            navigation
-          >
-            {data.map((item) => (
-              <SwiperSlide key={item.id}>
-                <img
-                  src={item.image}
-                  alt='slider'
-                  className='slider-item'
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </Box>
-
-        <div id="cfunciona"></div>
-        <Box>
           <Box
-            display='flex'
-            flexDirection='column'
-            justifyContent='center'
-            alignItems='center'
-            ml={{ base: '1rem', md: '4rem' }}
-            mr={{ base: '1rem', md: '3rem' }}
-            mt='2rem'>
-            <Text
-              as='b'
-              fontSize={{ base: '2rem', md: '3rem' }}
-              textColor='white' >
-              <Box as="span" color="#80ED99">COMO</Box> FUNCIONA
-            </Text>
+            mb='7rem'
+            mt='7rem'
+          >
+            <div id="imagens"></div>
+            <Swiper className='swiper-container'
+              slidesPerView={slidesPerView}
+              pagination={{ clickable: true }}
+              navigation
+            >
+              {data.map((item) => (
+                <SwiperSlide key={item.id}>
+                  <img
+                    src={item.image}
+                    alt='slider'
+                    className='slider-item'
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </Box>
 
-            <Text
-              fontSize={{ base: '1.2rem', md: '1.5rem' }}
-              textAlign={{ base: 'justify', md: 'justify' }}
-              textColor='white'
+          <div id="cfunciona"></div>
+          <Box>
+            <Box
+              display='flex'
+              flexDirection='column'
+              justifyContent='center'
+              alignItems='center'
+              ml={{ base: '1rem', md: '4rem' }}
+              mr={{ base: '1rem', md: '3rem' }}
               mt='2rem'>
-              O projeto convida fazendeiros e sitiantes locais a colaborar cedendo áreas próximas às divisas e margens das estradas para promover mudanças ambientais. Estudantes, ONGs, igrejas e voluntários interessados na conservação ambiental são incentivados a participar. Os voluntários irão plantar e cuidar das mudas nativas até que se tornem adultas, sendo que cada árvore plantada levará o nome do participante.
-            </Text>
+              <Text
+                as='b'
+                fontSize={{ base: '2rem', md: '3rem' }}
+                textColor='white' >
+                <Box as="span" color="#80ED99">COMO</Box> FUNCIONA
+              </Text>
 
-          </Box >
+              <Text
+                fontSize={{ base: '1.2rem', md: '1.5rem' }}
+                textAlign={{ base: 'justify', md: 'justify' }}
+                textColor='white'
+                mt='2rem'>
+                O projeto convida fazendeiros e sitiantes locais à colaborar cedendo áreas próximas às divisas e margens das estradas para promover mudanças ambientais. Estudantes, ONGs, igrejas e voluntários interessados na conservação ambiental são incentivados a participar. Os voluntários irão plantar e cuidar das mudas nativas até que se tornem adultas, sendo que cada árvore plantada levará o nome do participante.
+              </Text>
 
-          <Box
-            display='flex'
-            flexDirection='column'
+            </Box >
+
+            <Box
+              display='flex'
+              flexDirection='column'
+              justifyContent='center'
+              alignItems='center'
+              ml={{ base: '1rem', md: '4rem' }}
+              mr={{ base: '1rem', md: '3rem' }}
+              mt='2rem'>
+              <Text as='b'
+                fontSize={{ base: '2rem', md: '3rem' }}
+
+
+                textColor='white'>
+                <Box as="span" color="#80ED99">ACOMPANHAMENTO</Box> VERDE</Text>
+              <Text
+                fontSize={{ base: '1.2rem', md: '1.5rem' }}
+                textAlign={{ base: 'justify', md: 'justify' }}
+                textColor='white'
+                mt='2rem'>O plantio de árvores deve ocorrer durante as estações chuvosas, a partir do mês de setembro. Para garantir o sucesso do desenvolvimento das mudas, é essencial controlar a presença de formigas ou usar proteções físicas para evitar danos.</Text>
+            </Box>
+
+
+            <Box
+              display='flex'
+              flexDirection='column'
+              justifyContent='center'
+              alignItems='center'
+              ml={{ base: '1rem', md: '4rem' }}
+              mr={{ base: '1rem', md: '3rem' }}
+              mt='2rem'
+            >
+              <Text as='b'
+                fontSize={{ base: '2rem', md: '3rem' }}
+
+                textColor='white'>
+                <Box as="span" color="#80ED99">COMO</Box> PLANTAR E<br />  CUIDAR DA ARVORE</Text>
+              <Text
+                fontSize={{ base: '1.2rem', md: '1.5rem' }}
+                textAlign={{ base: 'justify', md: 'justify' }}
+                textColor='white'
+                mt='2rem'>Para plantar e cuidar de uma árvore, escolha uma muda com mais de 1,5 metros de comprimento afim de minimizar danos por animais. Opte por espécies adequadas ao clima e solo local, como Angico, Araçá Amarelo, Canela, Ipê, Jacarandá, Aroeira, entre outras. Antes do plantio, mantenha a umidade das raízes. Cave um buraco ao lado da estaca contrária ao pasto, com 50 cm de diâmetro e profundidade o dobro do comprimento do torrão. Coloque a planta no buraco e cubra o torrão com 3 cm de terra, compactando ao redor. Regue a base e crie um muro ao redor da árvore para retenção de água. Use a estaca como proteção da muda afim de orientar o crescimento e proteger contra animais e vento.</Text>
+            </Box>
+          </Box>
+
+          <Flex
             justifyContent='center'
+            display={{ base: 'flex', md: 'flex' }}
+            flexDirection={{ base: 'column', md: 'row' }}
             alignItems='center'
-            ml={{ base: '1rem', md: '4rem' }}
-            mr={{ base: '1rem', md: '3rem' }}
             mt='2rem'>
-            <Text as='b'
-              fontSize={{ base: '2rem', md: '3rem' }}
+
+            <Box
+              boxSize='100px' >
+              <a href="#"><img src="./LogoPix.png" alt="" /></a>
+            </Box>
+
+            <div id="doacoes"></div>
+            <Box
+              ml={{ base: '0.3rem', md: '1rem' }}
+            >
+
+              <Text
+                as='b'
+                fontSize={{ base: '1.2rem', md: '1.5rem' }}
+                textAlign={{ base: 'center', md: 'justify' }}
+                textColor='white'>Apoie o projeto Pé da Estaca com doações via Pix!<br />
+              </Text>
+              <Text
+                as='b'
+                fontSize={{ base: '1.2rem', md: '1.5rem' }}
+                textAlign={{ base: 'center', md: 'justify' }}
+                textColor='#80ED99'>
+                Chave: 32 9145-3325
+              </Text>
+            </Box>
+          </Flex>
+
+          <Box
+            display={{ base: 'flex', md: 'flex' }}
+            flexDirection={{ base: 'column', md: 'column' }}
+          >
 
 
-              textColor='white'>
-              <Box as="span" color="#80ED99">ACOMPANHAMENTO</Box> VERDE</Text>
-            <Text
-              fontSize={{ base: '1.2rem', md: '1.5rem' }}
-              textAlign={{ base: 'justify', md: 'justify' }}
-              textColor='white'
-              mt='2rem'>O plantio de árvores deve ocorrer durante as estações chuvosas, a partir de setembro. Para garantir o sucesso do desenvolvimento das mudas, é essencial controlar a presença de formigas ou usar proteções físicas para evitar danos.</Text>
           </Box>
-
 
           <Box
             display='flex'
             flexDirection='column'
-            justifyContent='center'
             alignItems='center'
-            ml={{ base: '1rem', md: '4rem' }}
-            mr={{ base: '1rem', md: '3rem' }}
             mt='2rem'
-          >
-            <Text as='b'
+            ml={{ base: '1rem', md: '4rem' }}
+            mr={{ base: '1rem', md: '3rem' }}>
+
+
+            <Text
               fontSize={{ base: '2rem', md: '3rem' }}
+              textColor='#80ED99'>Contato</Text>
+            <form className="form" onSubmit={sendEmail}>
+              <input
+                className="input"
+                type="text"
+                placeholder="Digite seu nome"
+                onChange={(e) => setName(e.target.value)}
+                value={name}
+              />
 
-              textColor='white'>
-              <Box as="span" color="#80ED99">COMO</Box> PLANTAR E<br />  CUIDAR DA ARVORE</Text>
-            <Text
-              fontSize={{ base: '1.2rem', md: '1.5rem' }}
-              textAlign={{ base: 'justify', md: 'justify' }}
-              textColor='white'
-              mt='2rem'>Para plantar e cuidar de uma árvore, escolha uma muda com mais de 1,5 metros de comprimento para minimizar danos por animais. Opte por espécies adequadas ao clima e solo local, como Angico, Araçá Amarelo, Canela, Ipê, Jacarandá, Aroeira, entre outras. Antes do plantio, mantenha a umidade das raízes. Cave um buraco ao lado da estaca contrária ao pasto, com 50 cm de diâmetro e profundidade o dobro do comprimento do torrão. Coloque a planta no buraco e cubra o torrão com 3 cm de terra, compactando ao redor. Regue a base e crie um muro ao redor da árvore para retenção de água. Use a estaca como protetor florestal para orientar o crescimento e proteger contra animais e vento.</Text>
+              <input
+                className="input"
+                type="text"
+                placeholder="Digite seu email"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+              />
+
+              <textarea
+                className="textarea"
+                placeholder="Digite sua mensagem..."
+                onChange={(e) => setMessage(e.target.value)}
+                value={message}
+              />
+
+              <input className="button" type="submit" value="Enviar" />
+            </form>
           </Box>
-        </Box>
-
-        <Flex
-          justifyContent='center'
-          display={{ base: 'flex', md: 'flex' }}
-          flexDirection={{ base: 'column', md: 'row' }}
-          alignItems='center'
-          mt='2rem'>
-
-          <Box
-            boxSize='100px' >
-            <a href="#"><img src="./LogoPix.png" alt="" /></a>
-          </Box>
-
-          <div id="doacoes"></div>
-          <Box
-            ml={{ base: '0.3rem', md: '1rem' }}
-          >
-
-            <Text
-              as='b'
-              fontSize={{ base: '1.2rem', md: '1.5rem' }}
-              textAlign={{ base: 'center', md: 'justify' }}
-              textColor='white'>Apoie o projeto Pé da Estaca com doações via Pix!<br />
-            </Text>
-            <Text
-              as='b'
-              fontSize={{ base: '1.2rem', md: '1.5rem' }}
-              textAlign={{ base: 'center', md: 'justify' }}
-              textColor='#80ED99'>
-              Chave: 32 9145-3325
-            </Text>
-          </Box>
-        </Flex>
-
-        <Box
-          display={{ base: 'flex', md: 'flex' }}
-          flexDirection={{ base: 'column', md: 'column' }}
-        >
-
-
-        </Box>
-
-        <Box
-          display='flex'
-          flexDirection='column'
-          alignItems='center'
-          mt='2rem'>
-
-          <Text
-            fontSize={{ base: '2rem', md: '3rem' }}
-            textColor='#80ED99'>Contato</Text>
-          <form className="form" onSubmit={sendEmail}>
-            <input
-              className="input"
-              type="text"
-              placeholder="Digite seu nome"
-              onChange={(e) => setName(e.target.value)}
-              value={name}
-            />
-
-            <input
-              className="input"
-              type="text"
-              placeholder="Digite seu email"
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-            />
-
-            <textarea
-              className="textarea"
-              placeholder="Digite sua mensagem..."
-              onChange={(e) => setMessage(e.target.value)}
-              value={message}
-            />
-
-            <input className="button" type="submit" value="Enviar" />
-          </form>
-        </Box>
 
 
 
-        <Flex bg='#343D3F'
-          justifyContent='center'
-          display={{ base: 'flex', md: 'flex' }}
-          flexDirection={{ base: 'column', md: 'row' }}
-          alignItems='center'>
-          <Box p='1rem' mt='2rem'>
+          <Flex bg='#343D3F'
+            justifyContent='center'
+            display={{ base: 'flex', md: 'flex' }}
+            flexDirection={{ base: 'column', md: 'row' }}
+            alignItems='center'>
+            <Box p='1rem' mt='2rem'
+              display={{ base: 'flex', md: 'flex' }}
+              flexDirection={{ base: 'column', md: 'row' }}>
+              <Box>
+                <Text
+                  fontFamily='roboto'
+                  textColor='white'
+                  fontSize={{ base: '1.2rem', md: '1.5rem' }}
+                  textAlign={{ base: 'center', md: 'justify' }}
+                  as='cite'
 
-            <Text
-              fontFamily='roboto'
-              textColor='white'
-              fontSize={{ base: '1.2rem', md: '1.5rem' }}
-              textAlign={{ base: 'center', md: 'justify' }}
-              as='cite'
+                  mr='2rem' ml='2rem'>
+                  “Comece fazendo o que é necessário, depois o que é possível, e de repente você estará fazendo o impossível...” São Francisco de Assis.<br></br>
+                </Text>
+                <Text
+                  fontFamily='roboto'
+                  textColor='white'
+                  fontSize={{ base: '1.2rem', md: '1.5rem' }}
+                  textAlign={{ base: 'center', md: 'justify' }}
+                  as='cite'
+                  mr='2rem'
+                  ml='2rem'>
+                  ‎ Que São Francisco nos abençoe, amém!
+                  O Meio Ambiente, agradece!
+                </Text></Box>
 
-              mr='2rem' ml='2rem'>
-              “Comece fazendo o que é necessário, depois o que é possível, e de repente você estará fazendo o impossível...” São Francisco de Assis.<br></br>
-            </Text>
-            <Text
-              fontFamily='roboto'
-              textColor='white'
-              fontSize={{ base: '1.2rem', md: '1.5rem' }}
-              textAlign={{ base: 'center', md: 'justify' }}
-              as='cite'
-              mr='2rem'
-              ml='2rem'>
-              ‎ Que São Francisco nos abençoe, amém!
-              O Meio Ambiente, agradece!
-            </Text>
-          </Box>
-        </Flex>
+              <Box
+                display='flex'
+                flexDirection='column'
+                alignItems='center'
+              >
+                <img src="./francisco.jfif" alt="" />
+              </Box>
+            </Box>
+          </Flex>
 
 
 
 
-      </Box >
+        </Box >
+      </Box>
     </>
   )
 }
