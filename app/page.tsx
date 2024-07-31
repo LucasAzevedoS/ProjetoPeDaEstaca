@@ -305,7 +305,7 @@ export default function Page() {
               <a href="#"><img src="./LogoPix.png" alt="" /></a>
             </Box>
 
-            
+
             <Box
               ml={{ base: '0.3rem', md: '1rem' }}
             >
@@ -314,15 +314,23 @@ export default function Page() {
                 as='b'
                 fontSize={{ base: '1.2rem', md: '1.5rem' }}
                 textAlign={{ base: 'center', md: 'justify' }}
-                textColor='white'>Apoie o projeto Pé da Estaca com doações via Pix!<br />
+                ml={{ base: '1rem', md: '4rem' }}
+                mr={{ base: '1rem', md: '3rem' }}
+                textColor='white'>Apoie o projeto com doações via Pix!<br />
               </Text>
-              <Text
-                as='b'
-                fontSize={{ base: '1.2rem', md: '1.5rem' }}
-                textAlign={{ base: 'center', md: 'justify' }}
-                textColor='#80ED99'>
-                Chave: 32 9145-3325
-              </Text>
+              <Box display='flex'
+                flexDirection='column'
+                alignItems='center'>
+                <Text
+                  as='b'
+                  fontSize={{ base: '1.2rem', md: '1.5rem' }}
+                  textAlign={{ base: 'center', md: 'justify' }}
+                  ml={{ base: '1rem', md: '4rem' }}
+                  mr={{ base: '1rem', md: '3rem' }}
+                  textColor='#80ED99'>
+                  Chave: 32 9145-3325
+                </Text>
+              </Box>
             </Box>
           </Flex>
 
@@ -341,7 +349,7 @@ export default function Page() {
             mt='2rem'
             ml={{ base: '1rem', md: '4rem' }}
             mr={{ base: '1rem', md: '3rem' }}>
-            
+
             <div id='contato'>
 
             </div>
@@ -376,53 +384,35 @@ export default function Page() {
               <input className="button" type="submit" value="Enviar" />
             </form>
           </Box>
-
-
-
-          <Flex bg='#343D3F'
-            justifyContent='center'
-            display={{ base: 'flex', md: 'flex' }}
+          <Box display='flex'
             flexDirection={{ base: 'column', md: 'row' }}
-            alignItems='center'>
-            <Box p='1rem' mt='2rem'
-              display={{ base: 'flex', md: 'flex' }}
-              flexDirection={{ base: 'column', md: 'row' }}>
-              <Box>
-                <Text
-                  fontFamily='roboto'
-                  textColor='white'
-                  fontSize={{ base: '1.2rem', md: '1.5rem' }}
-                  textAlign={{ base: 'center', md: 'justify' }}
-                  as='cite'
-
-                  mr='2rem' ml='2rem'>
-                  “Comece fazendo o que é necessário, depois o que é possível, e de repente você estará fazendo o impossível...” São Francisco de Assis.<br></br>
-                </Text>
-                <Text
-                  fontFamily='roboto'
-                  textColor='white'
-                  fontSize={{ base: '1.2rem', md: '1.5rem' }}
-                  textAlign={{ base: 'center', md: 'justify' }}
-                  as='cite'
-                  mr='2rem'
-                  ml='2rem'>
-                  ‎ Que São Francisco nos abençoe, amém!
-                  O Meio Ambiente, agradece!
-                </Text></Box>
-
-              <Box
-                display='flex'
-                flexDirection='column'
-                alignItems='center'
+            mt={{ base: '2rem', md: '4rem' }}
+            ml={{ base: '1rem', md: '4rem' }}
+            mr={{ base: '1rem', md: '3rem' }}
+            p={{ base: '1rem', md: '2rem' }}
+            >
+            <Box mt='auto'>
+              <Text
+                color='white'
+                fontSize={{ base: '1.2rem', md: '1.5rem' }}
               >
-                <img src="./francisco.jfif" alt="" />
-              </Box>
+                “Comece fazendo o que é necessário, depois o que é possível, e de repente você estará fazendo o impossível...” São Francisco de Assis.
+              </Text> 
+              <Text
+                color='white'
+                fontSize={{ base: '1.2rem', md: '1.5rem' }}
+              >
+                Que São Francisco nos abençoe, amém!O Meio Ambiente, agradece!
+              </Text>
             </Box>
-          </Flex>
-
-
-
-
+            <Box
+            display='flex'	
+            flexDirection={{ base: 'column'}}
+            alignItems={{ base: 'center', md: 'flex-end' }}
+            >
+              <img src="./francisco.jfif" alt="" />
+            </Box>
+          </Box>
         </Box >
       </Box>
     </>
