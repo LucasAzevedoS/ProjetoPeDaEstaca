@@ -148,7 +148,7 @@ export default function Page() {
             <Text
               fontSize={{ base: '30px', md: '35px', lg: '40px', xl: '50px' }}
               ml={{ base: '0', md: '3rem' }}
-              mt={{ base: '2rem', md: '12rem' }}
+              mt={{ base: '1rem', md: '5rem' }}
               fontFamily='arial'
               textColor='#80ED99'
               textAlign={{ base: 'center', md: 'left' }}
@@ -180,7 +180,7 @@ export default function Page() {
                 id='objetivo'
                 fontSize={{ base: '2rem', md: '3rem' }}
                 fontFamily='roboto'
-                color='white'
+                
                 mt='2rem'
                 as='b'
                 textColor='#80ED99'>
@@ -190,8 +190,8 @@ export default function Page() {
 
               <Text
                 fontSize={{ base: '1rem', md: '1.5rem' }}
-                fontFamily='roboto'
-                color='white'
+                fontFamily='arial'
+                color='#80ED99'
                 textAlign='justify' >
                 O projeto Pé da Estaca tem como objetivo desenvolver consciência crítica social e ambiental do sistema que interliga a sociedade com interesse comum.<br></br>
                 Para isso esse projeto ecológico Pé da Estaca visa plantar árvores nativas no pé da estaca a cada 50 ou 100 metros de distância as margens das estradas rurais e divisas em sítios e fazenda da região tendo como meta contribuir para o bem-estar animal, redução de gastos aos produtores, diminuição do aquecimento global, conservação ambiental e etc. no que resulta em qualidade de vida das pessoas, somando forças para preservar o nosso bem mais precioso.
@@ -242,7 +242,8 @@ export default function Page() {
               <Text
                 fontSize={{ base: '1.2rem', md: '1.5rem' }}
                 textAlign={{ base: 'justify', md: 'justify' }}
-                textColor='white'
+                textColor='#80ED99'
+                fontFamily='arial'
                 mt='2rem'>
                 O projeto convida fazendeiros e sitiantes locais à colaborar cedendo áreas próximas às divisas e margens das estradas para promover mudanças ambientais. Estudantes, ONGs, igrejas e voluntários interessados na conservação ambiental são incentivados a participar. Os voluntários irão plantar e cuidar das mudas nativas até que se tornem adultas, sendo que cada árvore plantada levará o nome do participante.
               </Text>
@@ -266,7 +267,8 @@ export default function Page() {
               <Text
                 fontSize={{ base: '1.2rem', md: '1.5rem' }}
                 textAlign={{ base: 'justify', md: 'justify' }}
-                textColor='white'
+                textColor='#80ED99'
+                fontFamily='arial'
                 mt='2rem'>O plantio de árvores deve ocorrer durante as estações chuvosas, a partir do mês de setembro. Para garantir o sucesso do desenvolvimento das mudas, é essencial controlar a presença de formigas ou usar proteções físicas para evitar danos.</Text>
             </Box>
 
@@ -288,7 +290,8 @@ export default function Page() {
               <Text
                 fontSize={{ base: '1.2rem', md: '1.5rem' }}
                 textAlign={{ base: 'justify', md: 'justify' }}
-                textColor='white'
+                textColor='#80ED99'
+                fontFamily='arial'
                 mt='2rem'>Para plantar e cuidar de uma árvore, escolha uma muda com mais de 1,5 metros de comprimento afim de minimizar danos por animais. Opte por espécies adequadas ao clima e solo local, como Angico, Araçá Amarelo, Canela, Ipê, Jacarandá, Aroeira, entre outras. Antes do plantio, mantenha a umidade das raízes. Cave um buraco ao lado da estaca contrária ao pasto, com 50 cm de diâmetro e profundidade o dobro do comprimento do torrão. Coloque a planta no buraco e cubra o torrão com 3 cm de terra, compactando ao redor. Regue a base e crie um muro ao redor da árvore para retenção de água. Use a estaca como proteção da muda afim de orientar o crescimento e proteger contra animais e vento.</Text>
             </Box>
           </Box>
@@ -308,6 +311,7 @@ export default function Page() {
 
             <Box
               ml={{ base: '0.3rem', md: '1rem' }}
+              mt={{ base: '1rem', md: '2rem' }}
             >
 
               <Text
@@ -386,21 +390,23 @@ export default function Page() {
           </Box>
           <Box display='flex'
             flexDirection={{ base: 'column', md: 'row' }}
-            mt={{ base: '2rem', md: '4rem' }}
+            mt={{ base: '1.2rem', md: '2.5rem' }}
             ml={{ base: '1rem', md: '4rem' }}
             mr={{ base: '1rem', md: '3rem' }}
             p={{ base: '1rem', md: '2rem' }}
             >
             <Box mt='auto'>
               <Text
-                color='white'
+                color='#80ED99'
                 fontSize={{ base: '1.2rem', md: '1.5rem' }}
+                fontFamily='arial'
               >
                 “Comece fazendo o que é necessário, depois o que é possível, e de repente você estará fazendo o impossível...” São Francisco de Assis.
               </Text> 
               <Text
-                color='white'
+                color='#80ED99'
                 fontSize={{ base: '1.2rem', md: '1.5rem' }}
+                fontFamily='arial'
               >
                 Que São Francisco nos abençoe, amém!O Meio Ambiente, agradece!
               </Text>
@@ -410,7 +416,7 @@ export default function Page() {
             flexDirection={{ base: 'column'}}
             alignItems={{ base: 'center', md: 'flex-end' }}
             >
-              <img src="./francisco.jfif" alt="" />
+              <img src="./francisco.jfif" alt=""  width='auto'/>
             </Box>
           </Box>
         </Box >
