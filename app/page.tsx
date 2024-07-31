@@ -403,13 +403,6 @@ export default function Page() {
               >
                 “Comece fazendo o que é necessário, depois o que é possível, e de repente você estará fazendo o impossível...” São Francisco de Assis.
               </Text>
-              <Text
-                color='#80ED99'
-                fontSize={{ base: '1.2rem', md: '1.5rem' }}
-                fontFamily='arial'
-              >
-                Que São Francisco nos abençoe, amém!O Meio Ambiente, agradece!
-              </Text>
             </Box>
             <Box
               display='flex'
