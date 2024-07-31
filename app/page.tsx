@@ -180,7 +180,7 @@ export default function Page() {
                 id='objetivo'
                 fontSize={{ base: '2rem', md: '3rem' }}
                 fontFamily='roboto'
-                
+
                 mt='2rem'
                 as='b'
                 textColor='#80ED99'>
@@ -193,7 +193,7 @@ export default function Page() {
                 fontFamily='arial'
                 color='#80ED99'
                 textAlign='justify' >
-                O projeto Pé da Estaca tem como objetivo desenvolver consciência crítica social e ambiental do sistema que interliga a sociedade com interesse comum.<br></br>
+                O projeto Pé da Estaca tem como objetivo desenvolver consciência crítica social e ambiental do sistema que interliga a sociedade com interesse comum.
                 Para isso esse projeto ecológico Pé da Estaca visa plantar árvores nativas no pé da estaca a cada 50 ou 100 metros de distância as margens das estradas rurais e divisas em sítios e fazenda da região tendo como meta contribuir para o bem-estar animal, redução de gastos aos produtores, diminuição do aquecimento global, conservação ambiental e etc. no que resulta em qualidade de vida das pessoas, somando forças para preservar o nosso bem mais precioso.
                 O projeto piloto foi desenvolvido na fazenda União e no Sítio Cachoeirinha de São Francisco na cidade de Visconde do Rio Branco Estado de Minas Gerais ao todo foram plantadas 200 mudas de arvores de Ipês branco, amarelo e roxo, Angico, Acácia, e árvores frutíferas.
               </Text>
@@ -235,8 +235,8 @@ export default function Page() {
               <Text
                 as='b'
                 fontSize={{ base: '2rem', md: '3rem' }}
-                textColor='white' >
-                <Box as="span" color="#80ED99">COMO</Box> FUNCIONA
+                textColor='#80ED99' >
+                <Box as="span" >COMO FUNCIONA</Box>
               </Text>
 
               <Text
@@ -260,10 +260,9 @@ export default function Page() {
               mt='2rem'>
               <Text as='b'
                 fontSize={{ base: '2rem', md: '3rem' }}
-
-
-                textColor='white'>
-                <Box as="span" color="#80ED99">ACOMPANHAMENTO</Box> VERDE</Text>
+                textColor='#80ED99'>
+                ACOMPANHAMENTOVERDE
+              </Text>
               <Text
                 fontSize={{ base: '1.2rem', md: '1.5rem' }}
                 textAlign={{ base: 'justify', md: 'justify' }}
@@ -285,8 +284,9 @@ export default function Page() {
               <Text as='b'
                 fontSize={{ base: '2rem', md: '3rem' }}
 
-                textColor='white'>
-                <Box as="span" color="#80ED99">COMO</Box> PLANTAR E<br />  CUIDAR DA ARVORE</Text>
+                textColor='#80ED99'>
+                COMO PLANTAR E<br />  CUIDAR DA ARVORE
+              </Text>
               <Text
                 fontSize={{ base: '1.2rem', md: '1.5rem' }}
                 textAlign={{ base: 'justify', md: 'justify' }}
@@ -394,7 +394,7 @@ export default function Page() {
             ml={{ base: '1rem', md: '4rem' }}
             mr={{ base: '1rem', md: '3rem' }}
             p={{ base: '1rem', md: '2rem' }}
-            >
+          >
             <Box mt='auto'>
               <Text
                 color='#80ED99'
@@ -402,7 +402,7 @@ export default function Page() {
                 fontFamily='arial'
               >
                 “Comece fazendo o que é necessário, depois o que é possível, e de repente você estará fazendo o impossível...” São Francisco de Assis.
-              </Text> 
+              </Text>
               <Text
                 color='#80ED99'
                 fontSize={{ base: '1.2rem', md: '1.5rem' }}
@@ -412,11 +412,11 @@ export default function Page() {
               </Text>
             </Box>
             <Box
-            display='flex'	
-            flexDirection={{ base: 'column'}}
-            alignItems={{ base: 'center', md: 'flex-end' }}
+              display='flex'
+              flexDirection={{ base: 'column' }}
+              alignItems={{ base: 'center', md: 'flex-end' }}
             >
-              <img src="./francisco.jfif" alt=""  width='auto'/>
+              <img src="./francisco.jfif" alt="" width='auto' />
             </Box>
           </Box>
         </Box >
