@@ -261,7 +261,7 @@ export default function Page() {
               <Text as='b'
                 fontSize={{ base: '2rem', md: '3rem' }}
                 textColor='#80ED99'>
-                ACOMPANHAMENTOVERDE
+                ACOMPANHAMENTO VERDE
               </Text>
               <Text
                 fontSize={{ base: '1.2rem', md: '1.5rem' }}
@@ -285,7 +285,7 @@ export default function Page() {
                 fontSize={{ base: '2rem', md: '3rem' }}
 
                 textColor='#80ED99'>
-                COMO PLANTAR E<br />  CUIDAR DA ARVORE
+                COMO PLANTAR E CUIDAR De UMA ARVORE
               </Text>
               <Text
                 fontSize={{ base: '1.2rem', md: '1.5rem' }}
@@ -318,23 +318,10 @@ export default function Page() {
                 as='b'
                 fontSize={{ base: '1.2rem', md: '1.5rem' }}
                 textAlign={{ base: 'center', md: 'justify' }}
-                ml={{ base: '1rem', md: '4rem' }}
-                mr={{ base: '1rem', md: '3rem' }}
-                textColor='white'>Apoie o projeto com doações via Pix!<br />
+                ml={{ base: '1rem', md: '0rem' }}
+                mr={{ base: '1rem', md: '0rem' }}
+                textColor='white'>Apoie o projeto. Entre em contato!<br />
               </Text>
-              <Box display='flex'
-                flexDirection='column'
-                alignItems='center'>
-                <Text
-                  as='b'
-                  fontSize={{ base: '1.2rem', md: '1.5rem' }}
-                  textAlign={{ base: 'center', md: 'justify' }}
-                  ml={{ base: '1rem', md: '4rem' }}
-                  mr={{ base: '1rem', md: '3rem' }}
-                  textColor='#80ED99'>
-                  Chave: 32 9145-3325
-                </Text>
-              </Box>
             </Box>
           </Flex>
 
