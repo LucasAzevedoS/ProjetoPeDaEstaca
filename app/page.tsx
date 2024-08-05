@@ -285,7 +285,7 @@ export default function Page() {
                 fontSize={{ base: '2rem', md: '3rem' }}
 
                 textColor='#80ED99'>
-                COMO PLANTAR E CUIDAR De UMA ARVORE
+                COMO PLANTAR E CUIDAR DE UMA ÁRVORE
               </Text>
               <Text
                 fontSize={{ base: '1.2rem', md: '1.5rem' }}
